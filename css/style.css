@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lemonada', cursive;
+}
+body{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,auto);
+}
+.aside{
+    padding: 12em 0;
+    grid-column-start: 4;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img{
+    
+    width:100%;
+}
+.aside span{
+    background: #a5c3c3;
+    height: 25px;
+    display: block;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    line-height: 1.3em;
+    font-size: 1.2rem;
+}
+.header{
+    background:#333;
+    color: white;
+    padding: 2em 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+}
+.header a{
+    text-decoration: none;
+    color:white;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navigation ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.navigation ul li{
+    display: inline-block;
+}
+.logo-nav-container ul li a{
+    display: block;
+    padding: 1em ;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.logo-nav-container ul li a:hover{
+    background: #4a4a4a;
+    color: rgb(230, 101, 27);
+}
+.logo{
+    color: white;
+    letter-spacing: 15px;
+    font-size: 1.2em;
+    padding: 1em;
+}
+.main{
+    padding-top: 12em;
+    grid-column: span 3;
+   
+}
+
+.footer{
+    background: #f2f2f2;
+    margin-top:15px;
+    padding: 4em 0;
+    text-align: center;
+    grid-column:span 4;
+
+}
+.menu-icon{
+    display: none;
+}
+
+
+
+
+
+@media(max-width: 768px){
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0 5em;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+    .navigation{
+        width: 100%;
+    }
+    .navigation ul li{
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-nav-container ul li a{
+        display: block;
+        padding:  1em;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+    }
+    .logo-nav-container ul li a:hover{
+        color: pink;
+    }
+    .main{
+        padding: 12em 2em;
+        grid-column: span 4;
+    }
+    .aside{
+        grid-column: span 4; 
+    }
+}
