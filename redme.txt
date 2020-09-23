@@ -1,2 +1,0 @@
-prueba apra git
-git diff
